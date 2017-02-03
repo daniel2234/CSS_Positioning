@@ -1,19 +1,44 @@
 <style>
-  #positioned{
+  #positioned {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  /* Add a z-index greater than the elements you want to appear on top of */
+  z-index: 2;
+  width: 400px;
+  padding: 30px 15px;
+  margin-left: -200px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+#positioned span {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background: #fcfc99;
+}
+
+  #fixed {
     position: fixed;
     top: 0;
-    width: 400px;
-    left: 50%;
-    padding: 30px 15px;
-    background: #ffffcc;
-    margin-left: -200px;
-    box-sizing: border-box;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, .6)
   }
 </style>
 
 
 <section>
-  <div id="positioned">I'm positioned!</div>
+  <div id="fixed">I'm fixed!</div>
+  <div id="positioned">
+  <span></span>
+  I'm positioned!
+  </div>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eleifend dapibus orci, at tristique orci vulputate at. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc nec bibendum mi, et sollicitudin lorem. Vestibulum venenatis odio vel nibh dignissim, a imperdiet felis viverra. Cras molestie posuere justo ac dictum. In hac habitasse platea dictumst. In id eleifend ante. Proin vitae ligula hendrerit, condimentum neque rhoncus, posuere libero. Ut placerat orci a metus condimentum, et hendrerit enim consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus aliquam facilisis ante nec iaculis. Cras ac est quis justo imperdiet dictum id et urna. Morbi orci dolor, tempor et tempus a, hendrerit id erat. Curabitur ut velit id libero mollis egestas vitae vel nisi.</p>
   <p>Ut ultricies varius ante at consequat. Sed commodo sodales lacus quis iaculis. Duis dignissim mi ut metus aliquet pellentesque. Pellentesque in sapien vulputate, accumsan purus sed, accumsan ligula. Suspendisse tincidunt tempor nulla, sed mollis nisi feugiat vitae. In bibendum, neque vitae placerat luctus, enim dolor pulvinar est, quis semper turpis ex vitae est. Morbi rhoncus est ipsum, in efficitur nisi sagittis sit amet. Curabitur consequat lorem eget orci ultricies dictum. Ut aliquam magna sit amet tempor ullamcorper. Etiam in ex in magna vehicula fermentum.</p>
   <p>Proin pulvinar, massa ut eleifend imperdiet, neque orci consectetur nibh, in iaculis nunc tortor vitae nisi. Aenean iaculis pulvinar augue quis ornare. Vestibulum hendrerit euismod tellus, ut fermentum ipsum aliquet pharetra. Phasellus quis auctor ligula, molestie rhoncus libero. Nulla facilisi. Nulla cursus rhoncus magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
